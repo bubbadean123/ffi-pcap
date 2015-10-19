@@ -1,5 +1,5 @@
 name: ffi-pcap
-version: 0.2.1
+version: 0.2.3wintest
 summary: FFI bindings for libpcap
 description: Bindings to libpcap via FFI interface in Ruby.
 license: MIT
@@ -15,7 +15,7 @@ requirements: libpcap >= 1.0.0
 
 dependencies:
   ffi: ~> 1.0
-  ffi_dry: ~> 0.1.12
+  ffi_dry: ~> 0.1.11
 
 development_dependencies:
   rubygems-tasks: ~> 0.1

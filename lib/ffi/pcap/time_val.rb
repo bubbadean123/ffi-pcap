@@ -5,8 +5,13 @@ module FFI
       include FFI::DRY::StructHelper
 
       dsl_layout do
-        field :tv_sec, :time_t
-        field :tv_usec, :suseconds_t
+	    if /cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM
+		  field :tv_sec, :long
+		  field :tv_usec, :long
+		else
+          field :tv_sec, :time_t
+          field :tv_usec, :suseconds_t
+		end
       end
 
       #
